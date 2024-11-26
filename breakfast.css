@@ -1,0 +1,104 @@
+/* Global Styles */
+body {
+    background-image: url(healthy-7213383.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-size: 100%;
+
+    font-family: 'Times New Roman', serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-container {
+    width: 100%;
+    max-width: 1000px;
+    padding: 50px;
+    text-align: center;
+    background-color: aliceblue;
+    opacity: 50%;
+    border-radius: 20px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 28px;
+    font-weight: normal;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    text-align: center;
+    color: darkred;
+}
+
+h2 {
+    font-size: 40px;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+    text-align: center;
+    color:darkred;
+}
+
+hr {
+    border: 1px solid #000;
+    margin: 20px 0;
+}
+
+h3 {
+    font-size: 30px;
+    letter-spacing: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+    color:darkred;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.menu-section {
+    text-align: center;
+}
+
+h4 {
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    color:darkred;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    color: black;
+}
+
+ul li {
+    font-size: 20px;
+    line-height: 1.8;
+    color: black;
+    font-weight: bold;
+}
+
+p {
+    font-size: 20px;
+    margin-top: 10px;
+    color: black;
+    font-weight: bold;
+}
+
+/* Responsive Layout */
+@media screen and (max-width: 768px) {
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+}

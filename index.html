@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    
+    <link href="https://www.freepik.com/animated-icon/shield_15179533#fromView=search&page=1&position=53&uuid=7e5ed7d9-96e6-4545-b11f-74c73a02a3f4">
+    <link rel="stylesheet" href="index.css" />
+    <title>Majesticia</title>
+    <link rel="icon" type="image/gif" href="luggage_14204952.gif">
+  </head>
+  <body>
+
+    <div id="preloader">
+      <div class="loader"></div>
+      <p class="loader-text">MAJESTICIA</p>
+    </div>
+    
+  
+
+    <header class="header">
+      <nav>
+        <div class="nav__bar">
+          <div class="logo">
+            <a href="#"><img src="logoog 3.png" alt="logo" /></a>
+          </div>
+          <div class="nav__menu__btn" id="menu-btn">
+            <i class="ri-menu-line"></i>
+          </div>
+        </div>
+        <ul class="nav__links" id="nav-links">
+          <li><a href="#home">HOME</a></li>
+          <li><a href="#about">ABOUT</a></li>
+          <li><a href="#service">SERVICES</a></li>
+          <li><a href="#explore">EXPLORE</a></li>
+          <li><a href="#contact">CONTACT</a></li>
+        </ul>
+        <button class="btn nav__btn" onclick="window.location.href='login.html'">LOGIN</button>
+      </nav>
+      <div class="section__container header__container" id="home">
+        <p> lavish suites - electrifying casinos -  world class dining</p>
+        <h1>Make Our Hotel Your Home<br/> Away From<span> Home</span>.</h1>
+      </div>  
+    </header>
+
+    <section class="section__container booking__container">
+      <form action="/" class="booking__form">
+        <div class="input__group">
+          <span><i class="ri-calendar-2-fill"></i></span>
+          <div>
+            <label for="check-in">CHECK-IN</label>
+            <input type="datetime-local" id="check-intime" name="check-intime" placeholder="Check In" />
+          </div>
+        </div>
+        <div class="input__group">
+          <span><i class="ri-calendar-2-fill"></i></span>
+          <div>
+            <label for="check-out">CHECK-OUT</label>
+            <input type="datetime-local" id="check-outtime" name="check-outtime" placeholder="Check Out" />
+          </div>
+        </div>
+        <div class="input__group">
+          <span><i class="ri-user-fill"></i></span>
+          <div>
+            <label for="guest">NAME</label>
+            <input type="text" placeholder="Name" />
+          </div>
+        </div>
+        <div class="input__group input__btn">
+          <button class="btn">BOOK NOW</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="section__container about__container" id="about">
+      <div class="about__image">
+        <video autoplay muted loop preload="auto" src="video.mp4" alt="about">
+      </div>
+      <div class="about__content">
+        <p class="section__subheader">ABOUT US</p>
+        <h2 class="section__header">Your Dream Escape Begins Now!</h2>
+        <p class="section__description">
+          Welcome to The Majesticia Hotel! Nestled amidst lush greenery, 
+          our family-owned retreat was born out of a love for nature and hospitality. 
+          From our grandmother’s secret recipes to our commitment to eco-friendly practices, 
+          every detail reflects our passion
+        </p>
+        <div class="about__btn">
+          <button class="btn">Read More</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section__container room__container">
+      <p class="section__subheader">OUR LIVING ROOM</p>
+      <h2 class="section__header">Savor Your Well-Deserved Break!</h2>
+      <div class="room__grid">
+        <div class="room__card">
+          <div class="room__card__image">
+            <video autoplay muted loop preload="auto" src="beach side resort.mp4" alt="video">
+          </div>
+          <div class="room__card__details">
+            <h4>Beachfront Suites</h4>
+            <p>
+              Our Beachfront Suites blend sophistication with beachy vibes. Crisp linens, 
+              driftwood accents, and sea-inspired hues create a haven where relaxation is an art form
+            </p>
+            <h5>Starting from <span>$6999/night</span></h5>
+            <button class="btn">Book Now</button>
+          </div>
+        </div>
+        <div class="room__card">
+          <div class="room__card__image">
+            <video  autoplay muted loop preload="auto" src="city.mp4" alt="room">
+            <div class="room__card__icons">
+              <span><i class="ri-heart-fill"></i></span>
+              <span><i class="ri-paint-fill"></i></span>
+              <span><i class="ri-shield-star-line"></i></span>
+            </div>
+          </div>
+          <div class="room__card__details">
+            <h4>Downtown Panorama Suite</h4>
+            <p>
+              The marble-clad bathroom invites you to unwind. Soak in the deep tub,
+              surrounded by scented candles. Wrap yourself in a plush robe, and let the city’s rhythm lull you into serenity.
+            </p>
+            <h5>Starting from <span>$5999/night</span></h5>
+            <button class="btn">Book Now</button>
+          </div>
+        </div>
+        <div class="room__card">
+          <div class="room__card__image">
+            <video  autoplay muted loop preload="auto" src="mountain.mp4" alt="room">
+            <div class="room__card__icons">
+              <span><i class="ri-heart-fill"></i></span>
+              <span><i class="ri-paint-fill"></i></span>
+              <span><i class="ri-shield-star-line"></i></span>
+            </div>
+          </div>
+          <div class="room__card__details">
+            <h4>Garden Oasis</h4>
+            <p>
+              Discover nooks where fairies might dance. Stone pathways wind past rose bushes, 
+              herb gardens, and ancient trees. Follow the sound of birdsong—it leads to the heart of our oasis.
+            </p>
+            <h5>Starting from <span>$3999/night</span></h5>
+            <button class="btn">Book Now</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="service" id="service">
+      <div class="section__container service__container">
+        <div class="service__img">
+        <img src="servicces.jpg"></img>
+      </div>
+        <div class="service__content">
+          <p class="section__subheader">SERVICES</p>
+          <h2 class="section__header">PROVIDE TOP-TIRE HOSPITALITY.</h2>
+          <ul class="service__list">
+            <li>
+              <span><img src="shield_10400622.gif"></span>
+              State-of-the-Art Security
+            </li>
+            <li>
+              <span><img src="24-7_12146050.gif"></span>
+              Round-the-Clock In-Room Dining
+            </li>
+            <li>
+              <span><img src="hall.gif"></span>
+              Business Venue
+            </li>
+            <li>
+              <span><img src="tour.gif"></span>
+              Local Exploration Services
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section__container banner__container">
+      <div class="banner__content">
+        <div class="banner__card">
+          <h4 id="propCount">0</h4>
+          <p>Properties Available</p>
+        </div>
+        <div class="banner__card">
+          <h4 id="roomCount">0</h4>
+          <p>Rooms</p>
+        </div>
+        <div class="banner__card">
+          <h4 id="customerCount">0</h4>
+          <p>Happy Customers</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="explore" id="explore">
+      <p class="section__subheader">DINING</p>
+      <h2 class="section__header">Dining Selection.</h2>
+      <div class="explore__bg">
+        <div class="explore__content">
+          <p class="section__description">ENJOY</p>
+          <h4>Food and beverage services are available at our hotel</h4>
+          <a href="menu.html"><button class="btn" >SELECT</button></a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer" id="contact">
+      <div class="section__container footer__container">
+        <div class="footer__col">
+          <div class="logo__logo">
+            <a href="#home"><img src="logoog 3.png" alt="logo" /></a>
+          </div>
+          <p class="section__description">
+            Picture waking up in a plush bed, sunlight streaming through the window, and the 
+            promise of new adventures. From the warm welcome at check-in to the personalized recommendations 
+            from our concierge, we’re here to make your stay unforgettable.
+          </p>
+          <button class="btn">Book Now</button>
+        </div>
+        <div class="footer__col">
+          <h4>QUICK LINKS</h4>
+          <ul class="footer__links">
+            <li><a href="#">Local Experiences and Recommendationss</a></li>
+            <li><a href="#">Exclusive Events and Activities</a></li>
+            <li><a href="#">Travel Tips & Guides</a></li>
+            <li><a href="#">Customer Reviews & Ratings</a></li>
+            <li><a href="#">Special Packages</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>OUR SERVICES</h4>
+          <ul class="footer__links">
+            <li><a href="#">Culinary Experiences</a></li>
+            <li><a href="#">Local Tours and Activities</a></li>
+            <li><a href="#">Pet-Friendly Amenities</a></li>
+            <li><a href="#">Business Services</a></li>
+            <li><a href="#">Family-Focused Offerings</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>CONTACT US</h4>
+          <ul class="footer__links">
+            <li><a href="#">Majesticia@gmail.com</a></li>
+          </ul>
+          <div class="footer__socials">
+            <a href="https://www.facebook.com/"><i class="ri-facebook-circle-fill"></i></a>
+            <a href="https://www.instagram.com/accounts/login/?hl=en"><i class="ri-instagram-line"></i></a>
+            <a href="https://www.youtube.com/"><i class="ri-youtube-line"></i></a>
+            <a href="https://x.com/i/flow/login"><i class="ri-twitter-x-line"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bar">
+        Copyright © 2024 LOGEESHWARA PA. All rights reserved.
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
