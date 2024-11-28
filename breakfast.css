@@ -2,6 +2,7 @@
 
 
 
+
 body {
     background: url('healthy-7213383.jpg');
     background-repeat: no-repeat;
@@ -13,6 +14,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: 100vh;
 }
 
 /* Preloader container */
@@ -58,12 +60,14 @@ body {
   
 
 .menu-container {
+    margin-left: 10px;
+    margin-right: 10px;
     width: 100%;
     max-width: 1000px;
     padding: 50px;
     text-align: center;
     background-color: aliceblue;
-    opacity: 50%;
+    opacity: 60%;
     border-radius: 20px;
     margin-top: 30px;
     margin-bottom: 20px;
@@ -83,7 +87,7 @@ h2 {
     letter-spacing: 3px;
     margin-bottom: 20px;
     text-align: center;
-    color:darkred;
+    color: darkred;
 }
 
 hr {
@@ -96,7 +100,7 @@ h3 {
     letter-spacing: 5px;
     margin-bottom: 20px;
     text-align: center;
-    color:darkred;
+    color: darkred;
 }
 
 .menu-grid {
@@ -116,7 +120,7 @@ h4 {
     font-weight: bold;
     letter-spacing: 1px;
     margin-bottom: 10px;
-    color:darkred;
+    color: darkred;
 }
 
 ul {
@@ -142,13 +146,72 @@ p {
 
 /* Responsive Layout */
 @media screen and (max-width: 768px) {
-
+    /* Adjust body background */
     body {
-        background-size: cover; /* Ensures the image adapts to the screen */
-        background-position: center top; /* Optionally align it to the top-center */
+        background-size: cover;
+        background-position: center top;
     }
-    
+
+    .menu-container {
+        padding: 30px 20px;
+    }
+
     .menu-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* Stack items vertically on small screens */
+        gap: 20px; /* Adjust gap for better spacing */
+    }
+
+    .menu-section {
+        padding: 10px;
+    }
+
+    h2 {
+        font-size: 32px;
+        margin-bottom: 15px;
+    }
+
+    h3 {
+        font-size: 26px;
+        margin-bottom: 15px;
+    }
+
+    h4 {
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+
+    ul li {
+        font-size: 18px; /* Adjust font size for small screens */
+    }
+
+    p {
+        font-size: 18px; /* Adjust font size for small screens */
+    }
+
+    /* Preloader adjustments for smaller screens */
+    #preloader {
+        padding: 0 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h2 {
+        font-size: 28px;
+    }
+
+    h3 {
+        font-size: 24px;
+    }
+
+    h4 {
+        font-size: 20px;
+    }
+
+    ul li {
+        font-size: 16px; /* Further decrease font size for mobile */
+    }
+
+    p {
+        font-size: 16px;
     }
 }

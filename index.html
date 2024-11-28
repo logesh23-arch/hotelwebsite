@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
-      href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css"
-      rel="stylesheet"
-    />
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css" rel="stylesheet"/>
     
     <link href="https://www.freepik.com/animated-icon/shield_15179533#fromView=search&page=1&position=53&uuid=7e5ed7d9-96e6-4545-b11f-74c73a02a3f4">
-    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href= "index.css"/>
     <title>Majesticia</title>
     <link rel="icon" type="image/gif" href="luggage_14204952.gif">
   </head>
@@ -19,9 +18,7 @@
       <div class="loader"></div>
       <p class="loader-text">MAJESTICIA</p>
     </div>
-    
   
-
     <header class="header">
       <nav>
         <div class="nav__bar">
@@ -38,12 +35,16 @@
           <li><a href="#service">SERVICES</a></li>
           <li><a href="#explore">EXPLORE</a></li>
           <li><a href="#contact">CONTACT</a></li>
+          <li>
+            <button class="btn"><a href="login.html">LOGIN</a></button>
+          </li>
         </ul>
-        <button class="btn nav__btn" onclick="window.location.href='login.html'">LOGIN</button>
+      </nav>
+
       </nav>
       <div class="section__container header__container" id="home">
         <p> lavish suites - electrifying casinos -  world class dining</p>
-        <h1>Make Our Hotel Your Home<br/> Away From<span> Home</span>.</h1>
+        <h1>Make Our Hotel Your Home<br/> Away From<span> Home</span></h1>
       </div>  
     </header>
 
@@ -78,7 +79,7 @@
 
     <section class="section__container about__container" id="about">
       <div class="about__image">
-        <video autoplay muted loop preload="auto" src="video.mp4" alt="about">
+        <video autoplay muted loop preload="auto" class="about__video" src="video.mp4" alt="about">
       </div>
       <div class="about__content">
         <p class="section__subheader">ABOUT US</p>
@@ -96,7 +97,7 @@
     </section>
 
     <section class="section__container room__container">
-      <p class="section__subheader">OUR LIVING ROOM</p>
+      <p class="section__subheader1 ">OUR LIVING ROOM</p>
       <h2 class="section__header">Savor Your Well-Deserved Break!</h2>
       <div class="room__grid">
         <div class="room__card">
@@ -126,7 +127,7 @@
             <h4>Downtown Panorama Suite</h4>
             <p>
               The marble-clad bathroom invites you to unwind. Soak in the deep tub,
-              surrounded by scented candles. Wrap yourself in a plush robe, and let the city’s rhythm lull you into serenity.
+              surrounded by scented candles. Wrap yourself in a plush robe, and let the city’s rhythm lull you into serenity
             </p>
             <h5>Starting from <span>$5999/night</span></h5>
             <button class="btn">Book Now</button>
@@ -145,7 +146,7 @@
             <h4>Garden Oasis</h4>
             <p>
               Discover nooks where fairies might dance. Stone pathways wind past rose bushes, 
-              herb gardens, and ancient trees. Follow the sound of birdsong—it leads to the heart of our oasis.
+              herb gardens, and ancient trees. Follow the sound of birdsong—it leads to the heart of our oasis
             </p>
             <h5>Starting from <span>$3999/night</span></h5>
             <button class="btn">Book Now</button>
@@ -161,7 +162,7 @@
       </div>
         <div class="service__content">
           <p class="section__subheader">SERVICES</p>
-          <h2 class="section__header">PROVIDE TOP-TIRE HOSPITALITY.</h2>
+          <h2 class="section__header">PROVIDE TOP-TIRE HOSPITALITY</h2>
           <ul class="service__list">
             <li>
               <span><img src="shield_10400622.gif"></span>
@@ -203,12 +204,14 @@
 
     <section class="explore" id="explore">
       <p class="section__subheader">DINING</p>
-      <h2 class="section__header">Dining Selection.</h2>
+      <h2 class="section__header">Dining Selection</h2>
       <div class="explore__bg">
         <div class="explore__content">
           <p class="section__description">ENJOY</p>
           <h4>Food and beverage services are available at our hotel</h4>
-          <a href="menu.html"><button class="btn" >SELECT</button></a>
+          <button class="btn " type="button">
+            <a href="menu.html">SELECT</a>
+        </button>
         </div>
       </div>
     </section>
@@ -221,8 +224,7 @@
           </div>
           <p class="section__description">
             Picture waking up in a plush bed, sunlight streaming through the window, and the 
-            promise of new adventures. From the warm welcome at check-in to the personalized recommendations 
-            from our concierge, we’re here to make your stay unforgettable.
+            promise of new adventures.
           </p>
           <button class="btn">Book Now</button>
         </div>
@@ -267,4 +269,4 @@
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="index.js"></script>
   </body>
-</html>
+</html> 
