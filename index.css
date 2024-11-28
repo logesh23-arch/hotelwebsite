@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,700;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
 
 :root {
@@ -56,12 +57,31 @@
   100% { transform: rotate(360deg); }
 }
 
-
-
 .section__container {
   max-width: var(--max-width);
   margin: auto;
   padding: 5rem 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem; 
+}
+
+.about__image {
+  flex: 1 1 100%; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about__image video {
+  max-width: 100%;
+  height: auto; 
+  border-radius: 5px;
+}
+
+.about__content {
+  flex: 1 1 100%; 
+  text-align: center; 
 }
 
 .section__subheader {
@@ -72,10 +92,20 @@
   color: var(--text-dark);
 }
 
+.section__subheader1{
+ text-align: center;
+ justify-content: center;
+ position: relative;
+ font-weight: 500;
+ letter-spacing: 2px;
+ color: var(--text-dark);
+}
+
 .section__subheader::after {
   position: absolute;
   top: 50%;
-  transform: translate(1rem, -50%);
+  left: 50%;
+  transform: translate(-50%, -50%);
   height: 2px;
   width: 4rem;
   background-color: var(--primary-color);
@@ -83,19 +113,18 @@
 
 .section__header {
   max-width: 600px;
-  margin-bottom: 1rem;
-  font-size: 2.5rem;
+  margin: 0 auto 1rem auto;
+  font-size: 2rem;
   font-weight: 600;
-  line-height: 3rem;
+  line-height: 2.5rem;
   color: var(--text-dark);
 }
 
 .section__description {
   max-width: 600px;
-  margin-bottom: 1rem;
+  margin: 0 auto 1rem auto;
   color: var(--text-light);
 }
-
 
 .btn {
   padding: 0.75rem 1.5rem;
@@ -113,6 +142,8 @@
 .btn:hover {
   background-color: var(--primary-color-dark);
 }
+
+
 
 img {
   width: 100%;
@@ -137,7 +168,7 @@ body {
 }
 
 .header {
-  background-image: url("backgroung\ imhg.jpg");
+  background-image: url('backgroung\ imhg.jpg');
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -154,6 +185,7 @@ nav {
 }
 
 .nav__bar {
+  max-height: 90px;
   padding: 1rem;
   display: flex;
   align-items: center;
@@ -166,6 +198,7 @@ nav {
   font-size: 1.5rem;
   color: var(--white);
   cursor: pointer;
+  z-index: 1000;
 }
 
 .nav__links {
@@ -228,6 +261,7 @@ nav {
 
 .booking__container {
   margin-top: 20px;
+  
 }
 
 .booking__form {
@@ -280,13 +314,6 @@ nav {
   overflow: hidden;
   display: grid;
   gap: 2rem;
-}
-
-.about__image video {
-  max-width: 600px;
-  max-height: 1000px;
-  margin: auto;
-  border-radius: 5px;
 }
 
 .room__grid {
@@ -495,7 +522,8 @@ nav {
     minmax(1rem, 1fr)
     minmax(0, var(--max-width))
     minmax(1rem, 1fr);
-  background-image: url("bgfood1.jpg");
+    background-image: url('bgfood1.jpg');
+
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -638,9 +666,7 @@ nav {
     background-color: transparent;
   }
 
-  .nav__btn {
-    display: block;
-  }
+ 
 
   .nav__links a::after {
     position: absolute;
@@ -660,7 +686,29 @@ nav {
 
   .about__container {
     grid-template-columns: repeat(2, 1fr);
-    align-items: center;
+  }
+
+  .section__container {
+    flex-direction: column; /* Stack elements vertically */
+  }
+
+  .about__image, .about__content {
+    flex: 1 1 100%;
+  }
+
+  .about__content {
+    text-align: center;
+    padding: 1rem; /* Add some padding for better spacing */
+  }
+
+  .section__header {
+    font-size: 1.75rem; /* Reduce size for smaller screens */
+    line-height: 2.2rem;
+  }
+
+  .btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
   }
 
   .room__grid {
@@ -679,5 +727,17 @@ nav {
 @media (width > 1024px) {
   .room__grid {
     gap: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section__header {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .btn {
+    font-size: 0.8rem;
+    padding: 0.5rem 0.8rem;
   }
 }

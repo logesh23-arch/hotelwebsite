@@ -1,27 +1,39 @@
-// Wait for the window to fully load, including all images, stylesheets, etc.
-window.onload = function() {
-    // Hide the preloader
-    document.getElementById("preloader").style.display = "none";
-    
-    // Display the main content
-    document.querySelector(".content").style.display = "block";
-  };
+window.onload = function () {
+  const preloader = document.getElementById("preloader");
+  const content = document.querySelector(".content");
+
+  if (preloader) preloader.style.display = "none";
+  if (content) content.style.display = "block";
+};
 
 const menuBtn = document.getElementById("menu-btn");
 const navLinks = document.getElementById("nav-links");
-const menuBtnIcon = menuBtn.querySelector("i");
+const menuBtnIcon = menuBtn ? menuBtn.querySelector("i") : null;
 
-menuBtn.addEventListener("click", (e) => {
-  navLinks.classList.toggle("open");
+if (menuBtn && navLinks && menuBtnIcon) {
+  menuBtn.addEventListener("click", (event) => {
+    event.stopPropagation();
+    navLinks.classList.toggle("open");
+    const isOpen = navLinks.classList.contains("open");
+    menuBtnIcon.setAttribute("class", isOpen ? "ri-close-line" : "ri-menu-line");
+  });
 
-  const isOpen = navLinks.classList.contains("open");
-  menuBtnIcon.setAttribute("class", isOpen ? "ri-close-line" : "ri-menu-line");
-});
+  navLinks.addEventListener("click", (event) => {
+    if (event.target.tagName === "A") {
+      navLinks.classList.remove("open");
+      menuBtnIcon.setAttribute("class", "ri-menu-line");
+    }
+  });
 
-navLinks.addEventListener("click", (e) => {
-  navLinks.classList.remove("open");
-  menuBtnIcon.setAttribute("class", "ri-menu-line");
-});
+  document.addEventListener("click", (event) => {
+    const isClickInsideMenu =
+      navLinks.contains(event.target) || menuBtn.contains(event.target);
+    if (!isClickInsideMenu) {
+      navLinks.classList.remove("open");
+      menuBtnIcon.setAttribute("class", "ri-menu-line");
+    }
+  });
+}
 
 const scrollRevealOption = {
   distance: "50px",
@@ -29,24 +41,8 @@ const scrollRevealOption = {
   duration: 1000,
 };
 
-ScrollReveal().reveal(".header__image img", {
-  ...scrollRevealOption,
-  origin: "right",
-});
-ScrollReveal().reveal(".header__content h2", {
-  ...scrollRevealOption,
-  delay: 500,
-});
-ScrollReveal().reveal(".header__content h1", {
-  ...scrollRevealOption,
-  delay: 1000,
-});
-
-ScrollReveal().reveal(".order__card", {
-  ...scrollRevealOption,
-  interval: 500,
-});
-
-ScrollReveal().reveal(".event__content", {
-  duration: 1000,
-});
+ScrollReveal().reveal(".header__image img", { ...scrollRevealOption, origin: "right" });
+ScrollReveal().reveal(".header__content h2", { ...scrollRevealOption, delay: 500 });
+ScrollReveal().reveal(".header__content h1", { ...scrollRevealOption, delay: 1000 });
+ScrollReveal().reveal(".order__card", { ...scrollRevealOption, interval: 500 });
+ScrollReveal().reveal(".event__content", { duration: 1000 });
